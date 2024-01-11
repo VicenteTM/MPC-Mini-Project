@@ -49,7 +49,7 @@
             % Horizon and cost matrices
             Q = 100*eye(nx);
             Q(2,2)=2*Q(2,2);
-            R = 0.01;
+            R = 3;
             [~,Qf] = dlqr(mpc.A,mpc.B,Q,R);
             
             % Slack variables and weight for the quadratic penalty
@@ -165,7 +165,7 @@
             B_bar = [mpc.B;zeros(1,nu)];
             C_bar = [mpc.C,Cd];        
     
-            L = -place(A_bar',C_bar',[0.7, 0.4, 0.1])';   %Maybe would need to change poles
+            L = -place(A_bar',C_bar',[0.3, 0.4, 0.5])';   %Maybe would need to change poles
             % YOUR CODE HERE YOUR CODE HERE YOUR CODE HERE YOUR CODE HERE
             %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         end
