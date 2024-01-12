@@ -1,3 +1,5 @@
+addpath(fullfile('..', 'src'));
+
 clc; 
 clear; 
 close all;
