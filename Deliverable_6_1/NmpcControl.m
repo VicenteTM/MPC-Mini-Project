@@ -79,12 +79,12 @@ classdef NmpcControl < handle
             lbu(4) = -20;
             ubu(4) = 20;
 
-            % Define the cost function
             Q = diag([200, 200, 100,...
-                      1000, 1000, 100, ...
-                      100, 100, 100, ...
+                      10, 10, 100, ...
+                      50, 50, 100, ...
                       150, 150, 200]); % State cost
-            R = diag([0.01, 0.01, 0.01, 0.5]); % Input cost
+            R = diag([0.1, 0.1, 0.01, 0.5]); % Input cost
+
             
   
             ref = [0, 0, 0, 0, 0, ref_sym(4), 0, 0, 0, ref_sym(1:3)']';

@@ -5,6 +5,7 @@ close all;
 %% Setup
 Ts = 1/20;
 rocket = Rocket(Ts);
+rocket.anim_rate = 3;
 
 H = 4; % Horizon length in seconds
 nmpc = NmpcControl(rocket, H);
